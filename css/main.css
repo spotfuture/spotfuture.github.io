@@ -11,8 +11,8 @@ html, body {
 
 #indexDropdown {
     padding-left: 2%;
-    width: 8%; /* Make it responsive by setting width to 100% */
-    max-width: 8%; /* Add a max-width to prevent it from becoming too wide */
+    width: 10%; /* Make it responsive by setting width to 100% */
+    max-width: 10%; /* Add a max-width to prevent it from becoming too wide */
 }
 
 .mr-2 {
