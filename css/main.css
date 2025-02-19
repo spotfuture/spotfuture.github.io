@@ -9,7 +9,21 @@ html, body {
     padding-bottom: 70px; /* Extra padding for bottom bar */
 }
 
-.price-container {
-    margin: 20px;
-    font-size: 24px;
+#indexDropdown {
+    padding-left: 2%;
+    width: 10%; /* Make it responsive by setting width to 100% */
+    max-width: 10%; /* Add a max-width to prevent it from becoming too wide */
+}
+
+.mr-2 {
+    margin-right: 10px; /* Small gap between the label and select box */
+    margin-bottom: 0.75rem;
+}
+
+/* Media query to make the dropdown look better on mobile screens */
+@media (max-width: 768px) {
+    #indexDropdown {
+        max-width: 30%;
+        width: 70%; /* Adjust width for mobile to make it fit better */
+    }
 }

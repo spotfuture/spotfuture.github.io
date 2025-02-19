@@ -13,8 +13,14 @@
 <body>    
     <div class="container text-center mt-5">
         <div class="card bg-dark text-white p-4 shadow-lg rounded">
-            <div class="d-flex justify-content-center mt-1 mb-1">
+            <div class="d-flex justify-content-center mt-1 mb-2">
                 <h2>HIVE/USDT Market Prices</h2>
+            </div>
+            <div class="d-flex justify-content-center mt-2 mb-3 align-items-center">
+                <p class="fs-4 mb-1 mr-2"><strong>INDEX:</strong></p>
+                <select id="indexDropdown" class="form-select fs-5">
+                    <!-- Dropdown options will be populated dynamically -->
+                </select>
             </div>
             <div class="d-flex justify-content-center mt-1 mb-1">
                 <p class="fs-4"><strong>SPOT Price:</strong> <span id="spotPrice">Loading...</span></p>
@@ -25,8 +31,15 @@
             <div class="d-flex justify-content-center mt-1 mb-1">
                 <p class="fs-4"><strong>Index Gap:</strong> <span id="indexGap">Loading...</span></p>
             </div>            
+            <div class="d-flex justify-content-center mt-2 mb-3">
+                <button type="button" class="btn btn-danger fs-5 refreshPrice">Refresh Price</button>
+            </div>
             <div class="d-flex justify-content-center mt-2 mb-2">
-                <button type="button" class="btn btn-danger refresh-btn fs-5 refreshPrice">Refresh Price</button>
+                <!-- Use flexbox for mobile and stack vertically on larger screens -->
+                <div class="d-flex flex-column flex-md-row justify-content-between col-12 col-md-8 mb-2">
+                    <p class="fs-5">UTC Now: <span id="utcnow">Loading...</span></p>
+                    <p class="fs-5">UTC Last: <span id="utclast">Loading...</span></p>
+                </div>
             </div>
         </div>       
     </div>    
