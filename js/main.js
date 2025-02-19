@@ -92,7 +92,7 @@ $(window).bind("load", async function () {
 
     async function calcIndexGap(spotPrice, futurePrice) {
         try {
-            return parseFloat(((futurePrice / spotPrice) - 1) * 100).toFixed(5);
+            return parseFloat((((futurePrice - spotPrice) / spotPrice)) * 100).toFixed(5);
         } catch (error) {
             console.error('Error at calcIndexGap():', error);
             return "0.000";
@@ -101,19 +101,14 @@ $(window).bind("load", async function () {
 
     // Update UTC time and store the last value
     function updateUtcNowTime() {
-        const currentUtc = new Date().toISOString();
-        const formattedUtc = currentUtc.substring(0, 19); // Remove milliseconds part
-
-        // Update the UTC now and last times
-        $("#utcnow").text(formattedUtc);
+        const currentUtc = new Date().toISOString().substring(0, 19).replace("T", " ");
+        $("#utcnow").text(currentUtc);
     }
 
-     // Update UTC time and store the last value
-     function updateUtcLastTime() {
-        const currentUtc = new Date().toISOString();
-        const formattedUtc = currentUtc.substring(0, 19); // Remove milliseconds part
-        
-        $("#utclast").text(formattedUtc);
+    // Update UTC time and store the last value
+    function updateUtcLastTime() {
+        const currentUtc = new Date().toISOString().substring(0, 19).replace("T", " ");
+        $("#utclast").text(currentUtc);
     }
 
     // Initial fetch and populate dropdown
